@@ -9,7 +9,7 @@
 	<install for="2.0 - 2.0.99">
 		<modification>install2.xml</modification>
 		<require-file name="TopicViewLog.php" destination="$sourcedir" />
-		<code type="file">install2.php</code>
+		<database>install2.php</database>
 	</install>
 
 	<uninstall for="2.0 - 2.0.99">
