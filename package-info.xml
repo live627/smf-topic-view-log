@@ -6,14 +6,14 @@
 	<version>1.0</version>
 	<type>modification</type>
 
-	<install for="2.0 - 2.99.99">
-		<modification format="xml" type="file">install2.xml</modification>
+	<install for="2.0 - 2.0.99">
+		<modification>install2.xml</modification>
 		<require-file name="TopicViewLog.php" destination="$sourcedir" />
 		<code type="file">install2.php</code>
 	</install>
 
-	<uninstall for="2.0 - 2.99.99">
-		<modification format="xml" type="file" reverse="true">install2.xml</modification>
+	<uninstall for="2.0 - 2.0.99">
+		<modification reverse="true">install2.xml</modification>
 		<remove-file name="$sourcedir/TopicViewLog.php" />
 	</uninstall>
 
