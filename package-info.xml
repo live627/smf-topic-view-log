@@ -2,8 +2,8 @@
 <!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
 <package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
 	<name>Topic View Log</name>
-	<id>[SiNaN]:TopicLog</id>
-	<version>1.2</version>
+	<id>live627:topicviewlog</id>
+	<version>1.0</version>
 	<type>modification</type>
 
 	<install for="2.0 - 2.99.99">
