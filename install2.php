@@ -1,26 +1,14 @@
 <?php
 
-	global $mbname, $boardurl, $db_prefix, $context;
-	global $smcFunc, $db_name;
-	// Define the Manual Installation Status
-    $manual_install = false;
-    if (file_exists(dirname(__FILE__) . '/SSI.php') && !defined('SMF')){
-		require_once(dirname(__FILE__) . '/SSI.php');
-	
-		$manual_install = true;
-    }
-    elseif (!defined('SMF'))
-	die('installer wasn\'t able to connect to SMF! Make sure that you are either installing this via the Package Manager or the SSI.php file is in the same directory.');
-    if ($manual_install)
-	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-	<title>Database Installer</title>
-     <link rel="stylesheet" type="text/css" href="Themes/default/style.css" />
-</head>
-<body>
-	<br /><br />';
-
-db_extend('packages');
+if (file_exists(dirname(__FILE__) . '/SSI.php') && !defined('SMF'))
+{
+	$ssi = true;
+	require_once(dirname(__FILE__) . '/SSI.php');
+}
+elseif (!defined('SMF'))
+	exit('<b>Error:</b> Cannot install - please verify you put this in the same place as SMF\'s index.php.');
+if (!array_key_exists('db_add_column', $smcFunc))
+	db_extend('packages');
 
     // Creating tables
 	$tables = array(

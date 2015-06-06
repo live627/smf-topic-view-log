@@ -1,44 +1,9 @@
 <?php
-/**********************************************************************************
-* TopicViewLog.php                                                        		    *
-***********************************************************************************
-* TopicViewLog                                                                    *
-* =============================================================================== *
-* Software Version:           TopicViewLog 1.1                                    *
-* Software by:                Blue Dream (http://www.simpleportal.net)            *
-* Copyright 2006-2008 by:     Blue Dream (http://www.simpleportal.net)            *
-* Support, News, Updates at:  http://www.simplemachines.org                       *
-***********************************************************************************
-* This program is free software; you may redistribute it and/or modify it under   *
-* the terms of the provided license as published by Simple Machines LLC.          *
-*                                                                                 *
-* This program is distributed in the hope that it is and will be useful, but      *
-* WITHOUT ANY WARRANTIES; without even any implied warranty of MERCHANTABILITY    *
-* or FITNESS FOR A PARTICULAR PURPOSE.                                            *
-*                                                                                 *
-* See the "license.txt" file for details of the Simple Machines license.          *
-* The latest version can always be found at http://www.simplemachines.org.        *
-**********************************************************************************/
+// Version: 1.0: TopicViewLog.php
+// Licence: MIT
 
 if (!defined('SMF'))
 	die('Hacking attempt...');
-
-/*
-	This is the main file handling TopicViewLog.
-
-	void TopicViewLog()
-		// !!!
-
-	array list_get_tvl_members(int start, int items_per_page, raw sort)
-		// !!!
-
-	int list_get_tvl_num_members()
-		// !!!
-
-	void tvl_log()
-		// !!!
-
-*/
 
 function TopicViewLog()
 {
