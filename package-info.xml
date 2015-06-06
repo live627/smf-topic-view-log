@@ -7,7 +7,6 @@
 	<type>modification</type>
 
 	<install for="2.0 - 2.99.99">
-		<readme type="file" parsebbc="true">readme.txt</readme>
 		<modification format="xml" type="file">install2.xml</modification>
 		<modification format="xml" type="file">languages.xml</modification>
 		<require-file name="TopicViewLog.php" destination="$sourcedir" />
