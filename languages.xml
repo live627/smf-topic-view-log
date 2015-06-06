@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<id>[SiNaN]:TopicLog</id>
+	<name>Topic View Log</name>
+	<version>1.2</version>
+
+	<file name="$languagedir/Modifications.english.php">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic View Log
+$txt['tvl_title'] = 'Topic Log';
+$txt['tvl_times'] = 'Times';
+$txt['tvl_lastView'] = 'Last View';
+
+$txt['permissionname_tvl_view'] = 'View topic view log';
+$txt['permissionhelp_tvl_view'] = 'This permission allows users to view the topic view log.';
+$txt['permissionname_tvl_view_own'] = 'Own topic';
+$txt['permissionname_tvl_view_any'] = 'Any topic';
+$txt['permissionname_simple_tvl_view_own'] = 'View own topic view log';
+$txt['permissionname_simple_tvl_view_any'] = 'View any topic view log';
+
+$txt['tvl_no_topic_id'] = 'Topic ID is not set.';
+$txt['tvl_no_topic'] = 'Topic doesn\'t exist.';
+$txt['who_topiclog'] = 'Viewing the topic log of <a href="' . $scripturl . '?action=topiclog;id=%d.0">%s</a>.';
+
+$txt['cannot_tvl_view_own'] = 'You cannot view the topic view log of your own topics.';
+$txt['cannot_tvl_view_any'] = 'You cannot view the topic view log of topics.';]]></add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.english-utf8.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic View Log
+$txt['tvl_title'] = 'Topic Log';
+$txt['tvl_times'] = 'Times';
+$txt['tvl_lastView'] = 'Last View';
+
+$txt['permissionname_tvl_view'] = 'View topic view log';
+$txt['permissionhelp_tvl_view'] = 'This permission allows users to view the topic view log.';
+$txt['permissionname_tvl_view_own'] = 'Own topic';
+$txt['permissionname_tvl_view_any'] = 'Any topic';
+$txt['permissionname_simple_tvl_view_own'] = 'View own topic view log';
+$txt['permissionname_simple_tvl_view_any'] = 'View any topic view log';
+
+$txt['tvl_no_topic_id'] = 'Topic ID is not set.';
+$txt['tvl_no_topic'] = 'Topic doesn\'t exist.';
+$txt['who_topiclog'] = 'Viewing the topic log of <a href="' . $scripturl . '?action=topiclog;id=%d.0">%s</a>.';
+
+$txt['cannot_tvl_view_own'] = 'You cannot view the topic view log of your own topics.';
+$txt['cannot_tvl_view_any'] = 'You cannot view the topic view log of topics.';]]></add>
+		</operation>
+	</file>
+	
+	<file name="$languagedir/Modifications.portuguese.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic Log Mod			
+$txt['lt_title'] = 'T&oacute;pico Log';
+$txt['lt_times'] = 'Times';
+$txt['lt_lastView'] = '&Uacute;ltima Vista';
+$txt['tl_no_topic_id'] = 'T&oacute;pico ID n&atilde;o est&aacute; definido.';
+$txt['tl_no_topic'] = 'T&oacute;pico não existe.';
+$txt['who_log'] = 'Vendo o t&oacute;pico de log <a href="' . $scripturl . '?action=topiclog;id=%d">%s</a>.';
+
+$txt['cannot_view_topic_log_own'] = 'Voc&ecirc; n&atilde;o tem, neste f&oacute;rum, permiss&atilde;o para visualizar o t&oacute;pico registado de suas pr&oacute;prias postagens.';
+$txt['cannot_view_topic_log_any'] = 'Vendo apenas qualquer t&oacute;pico log neste quadro n&atilde;o esta permitido.';
+
+$txt['permissionname_view_topic_log'] = 'Ver t&oacute;pico Log';
+$txt['permissionhelp_view_topic_log'] = 'Isso permite que um membro tenha permiss&atilde;o para ver o t&oacute;pico vista log.';
+$txt['permissionname_view_topic_log_own'] = 'Seus t&oacute;pico';
+$txt['permissionname_view_topic_log_any'] = 'Qualquer t&oacute;pico';
+// Topic Log Mod			
+]]></add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.brazilian.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic Log Mod			
+$txt['lt_title'] = 'T&oacute;pico Log';
+$txt['lt_times'] = 'Times';
+$txt['lt_lastView'] = '&Uacute;ltima Vista';
+$txt['tl_no_topic_id'] = 'T&oacute;pico ID n&atilde;o est&aacute; definido.';
+$txt['tl_no_topic'] = 'T&oacute;pico n&atilde;o existe.';
+$txt['who_log'] = 'Vendo o t&oacute;pico de log <a href="' . $scripturl . '?action=topiclog;id=%d">%s</a>.';
+
+$txt['cannot_view_topic_log_own'] = 'Voc&ecirc; n&atilde;o tem, neste f&oacute;rum, permiss&atilde;o para visualizar o t&oacute;pico registado de suas pr&oacute;prias postagens.';
+$txt['cannot_view_topic_log_any'] = 'Vendo apenas qualquer t&oacute;pico log neste quadro n&atilde;o esta permitido.';
+
+$txt['permissionname_view_topic_log'] = 'Ver t&oacute;pico Log';
+$txt['permissionhelp_view_topic_log'] = 'Isso permite que um membro tenha permiss&atilde;o para ver o t&oacute;pico vista log.';
+$txt['permissionname_view_topic_log_own'] = 'Seus t&oacute;pico';
+$txt['permissionname_view_topic_log_any'] = 'Qualquer t&oacute;pico';
+// Topic Log Mod			
+]]></add>
+		</operation>
+	</file>
+	
+	<file name="$languagedir/Modifications.portuguese-utf8.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic Log Mod			
+$txt['lt_title'] = 'T&oacute;pico Log';
+$txt['lt_times'] = 'Times';
+$txt['lt_lastView'] = '&Uacute;ltima Vista';
+$txt['tl_no_topic_id'] = 'T&oacute;pico ID n&atilde;o est&aacute; definido.';
+$txt['tl_no_topic'] = 'T&oacute;pico n&atilde;o existe.';
+$txt['who_log'] = 'Vendo o t&oacute;pico de log <a href="' . $scripturl . '?action=topiclog;id=%d">%s</a>.';
+
+$txt['cannot_view_topic_log_own'] = 'Voc&ecirc; n&atilde;o tem, neste f&oacute;rum, permiss&atilde;o para visualizar o t&oacute;pico registado de suas pr&oacute;prias postagens.';
+$txt['cannot_view_topic_log_any'] = 'Vendo apenas qualquer t&oacute;pico log neste quadro n&atilde;o esta permitido.';
+
+$txt['permissionname_view_topic_log'] = 'Ver t&oacute;pico Log';
+$txt['permissionhelp_view_topic_log'] = 'Isso permite que um membro tenha permiss&atilde;o para ver o t&oacute;pico vista log.';
+$txt['permissionname_view_topic_log_own'] = 'Seus t&oacute;pico';
+$txt['permissionname_view_topic_log_any'] = 'Qualquer t&oacute;pico';
+// Topic Log Mod			
+]]></add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.brazilian-utf8.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic Log Mod			
+$txt['lt_title'] = 'T&oacute;pico Log';
+$txt['lt_times'] = 'Times';
+$txt['lt_lastView'] = '&Uacute;ltima Vista';
+$txt['tl_no_topic_id'] = 'T&oacute;pico ID n&atilde;o est&aacute; definido.';
+$txt['tl_no_topic'] = 'T&oacute;pico n&atilde;o existe.';
+$txt['who_log'] = 'Vendo o t&oacute;pico de log <a href="' . $scripturl . '?action=topiclog;id=%d">%s</a>.';
+
+$txt['cannot_view_topic_log_own'] = 'Voc&ecirc; n&atilde;o tem, neste f&oacute;rum, permiss&atilde;o para visualizar o t&oacute;pico registado de suas pr&oacute;prias postagens.';
+$txt['cannot_view_topic_log_any'] = 'Vendo apenas qualquer t&oacute;pico log neste quadro n&atilde;o esta permitido.';
+
+$txt['permissionname_view_topic_log'] = 'Ver t&oacute;pico Log';
+$txt['permissionhelp_view_topic_log'] = 'Isso permite que um membro tenha permiss&atilde;o para ver o t&oacute;pico vista log.';
+$txt['permissionname_view_topic_log_own'] = 'Seus t&oacute;pico';
+$txt['permissionname_view_topic_log_any'] = 'Qualquer t&oacute;pico';
+// Topic Log Mod			
+]]></add>
+		</operation>
+	</file>
+
+	<file name="$languagedir/Modifications.polish.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic Log Mod 
+$txt['lt_title'] = 'Temat Sprawozdanie';
+$txt['lt_times'] = 'Razy'; 
+$txt['lt_lastView'] = 'Ostatnio Przegladane'; 
+$txt['tl_no_topic_id'] = 'Temat ID brak ustawien.'; 
+$txt['tl_no_topic'] = 'Temat nie istnieje.'; 
+$txt['who_log'] = 'Przegladanie logów tematów <a href="' . $scripturl . '?action=topiclog;id=%d">%s</a>.'; 
+$txt['cannot_view_topic_log_own'] = 'Nie mozesz ogladac logow wlasnych tematów.'; 
+$txt['cannot_view_topic_log_any'] = Ogladanie jakichkolwiek logów tematu w tym forum jest niedozwolone.'; 
+$txt['permissionname_view_topic_log'] = 'Pokaz logi tematu'; 
+$txt['permissionhelp_view_topic_log'] = Te przywileje pozwalaja userowi przegladanie tematu i logów.'; 
+$txt['permissionname_view_topic_log_own'] = 'Wlasny Temat'; 
+$txt['permissionname_view_topic_log_any'] = 'Dowolny Temat'; 
+// Topic Log Mod		
+]]></add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.spanish_latin-utf8.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic Log Mod			
+$txt['lt_title'] = 'Log Vistas';
+$txt['lt_times'] = 'Veces';
+$txt['lt_lastView'] = 'Ultima Vista';
+$txt['tl_no_topic_id'] = 'La ID del Tema No esta Seteada.';
+$txt['tl_no_topic'] = 'Tema No Existente.';
+$txt['who_log'] = 'Ver las Vistas del Tema de <a href="' . $scripturl . '?action=topiclog;id=%d">%s</a>.';
+
+$txt['cannot_view_topic_log_own'] = 'No Tienes Permitido ver El Registro de Las Vistas de Tu Tema.';
+$txt['cannot_view_topic_log_any'] = 'No Esta Permitido ver El Registro de Las Vistas del Tema.';
+
+$txt['permissionname_view_topic_log'] = 'Ver Topic Log';
+$txt['permissionhelp_view_topic_log'] = 'Este permiso permite a un usuario ver el registro de vistas de un Tema.';
+$txt['permissionname_view_topic_log_own'] = 'Tema Propio';
+$txt['permissionname_view_topic_log_any'] = 'Cualquier tema';
+// Topic Log Mod
+]]></add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.spanish_latin.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic Log Mod			
+$txt['lt_title'] = 'Log Vistas';
+$txt['lt_times'] = 'Veces';
+$txt['lt_lastView'] = 'Ultima Vista';
+$txt['tl_no_topic_id'] = 'La ID del Tema No esta Seteada.';
+$txt['tl_no_topic'] = 'Tema No Existente.';
+$txt['who_log'] = 'Ver las Vistas del Tema de <a href="' . $scripturl . '?action=topiclog;id=%d">%s</a>.';
+
+$txt['cannot_view_topic_log_own'] = 'No Tienes Permitido ver El Registro de Las Vistas de Tu Tema.';
+$txt['cannot_view_topic_log_any'] = 'No Esta Permitido ver El Registro de Las Vistas del Tema.';
+
+$txt['permissionname_view_topic_log'] = 'Ver Topic Log';
+$txt['permissionhelp_view_topic_log'] = 'Este permiso permite a un usuario ver el registro de vistas de un Tema.';
+$txt['permissionname_view_topic_log_own'] = 'Tema Propio';
+$txt['permissionname_view_topic_log_any'] = 'Cualquier tema';
+// Topic Log Mod
+]]></add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.spanish_es-utf8.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic Log Mod			
+$txt['lt_title'] = 'Log Vistas';
+$txt['lt_times'] = 'Veces';
+$txt['lt_lastView'] = 'Ultima Vista';
+$txt['tl_no_topic_id'] = 'La ID del Tema No esta Seteada.';
+$txt['tl_no_topic'] = 'Tema No Existente.';
+$txt['who_log'] = 'Ver las Vistas del Tema de <a href="' . $scripturl . '?action=topiclog;id=%d">%s</a>.';
+
+$txt['cannot_view_topic_log_own'] = 'No Tienes Permitido ver El Registro de Las Vistas de Tu Tema.';
+$txt['cannot_view_topic_log_any'] = 'No Esta Permitido ver El Registro de Las Vistas del Tema.';
+
+$txt['permissionname_view_topic_log'] = 'Ver Topic Log';
+$txt['permissionhelp_view_topic_log'] = 'Este permiso permite a un usuario ver el registro de vistas de un Tema.';
+$txt['permissionname_view_topic_log_own'] = 'Tema Propio';
+$txt['permissionname_view_topic_log_any'] = 'Cualquier tema';
+// Topic Log Mod
+]]></add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.spanish_es.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Topic Log Mod			
+$txt['lt_title'] = 'Log Vistas';
+$txt['lt_times'] = 'Veces';
+$txt['lt_lastView'] = 'Ultima Vista';
+$txt['tl_no_topic_id'] = 'La ID del Tema No esta Seteada.';
+$txt['tl_no_topic'] = 'Tema No Existente.';
+$txt['who_log'] = 'Ver las Vistas del Tema de <a href="' . $scripturl . '?action=topiclog;id=%d">%s</a>.';
+
+$txt['cannot_view_topic_log_own'] = 'No Tienes Permitido ver El Registro de Las Vistas de Tu Tema.';
+$txt['cannot_view_topic_log_any'] = 'No Esta Permitido ver El Registro de Las Vistas del Tema.';
+
+$txt['permissionname_view_topic_log'] = 'Ver Topic Log';
+$txt['permissionhelp_view_topic_log'] = 'Este permiso permite a un usuario ver el registro de vistas de un Tema.';
+$txt['permissionname_view_topic_log_own'] = 'Tema Propio';
+$txt['permissionname_view_topic_log_any'] = 'Cualquier tema';
+// Topic Log Mod
+]]></add>
+		</operation>
+	</file>
+</modification>

@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<id>[SiNaN]:TopicLog</id>
+	<name>Topic View Log</name>
+	<version>1.2</version>
+
+	<file name="$themedir/Display.template.php">
+		<operation>
+			<search position="after"><![CDATA[
+	// Show the page index... "Pages: [1]".]]></search>
+			<add><![CDATA[
+	// Topic View Log button.
+	if ($context['can_view_topic_log'])
+		$normal_buttons['view_topic_log'] = array('text' => 'tvl_title', 'image' => 'topiclog.gif', 'lang' => true, 'url' => $scripturl . '?action=topicviewlog;id=' . $context['current_topic']);
+]]></add>
+		</operation>
+	</file>
+
+	<file name="$themedir/MessageIndex.template.php">
+		<operation>
+			<search position="replace"><![CDATA[', $topic['views'], ']]></search>
+			<add><![CDATA[', $topic['views_link'], ']]></add>
+		</operation>
+	</file>
+
+	<file name="$boarddir/index.php">
+		<operation>
+			<search position="before"><![CDATA[
+		'trackip' => array('Profile.php', 'trackIP'),]]></search>
+			<add><![CDATA[
+		'topicviewlog' => array('TopicLog.php', 'TopicLog'),]]></add>
+		</operation>
+	</file>
+
+	<file name="$sourcedir/Display.php">
+		<operation>
+			<search position="after"><![CDATA[
+	// Add 1 to the number of views of this topic.]]></search>
+			<add><![CDATA[
+	// Include a fancy file for some logging.
+	require_once($sourcedir . '/TopicLog.php');
+
+	// Who viewed this?!
+	tvl_log();
+]]></add>
+		</operation>
+
+		<operation>
+			<search position="before"><![CDATA[
+	$context['topic_starter_id'] = $topicinfo['ID_MEMBER_STARTED'];
+]]></search>
+			<add><![CDATA[
+	// Can he see the topic log.
+	$context['can_view_topic_log'] = allowedTo('tvl_view_any') || (allowedTo('tvl_views_own') && $context['user']['started']);
+]]></add>
+		</operation>
+	</file>
+
+	<file name="$sourcedir/MessageIndex.php">
+		<operation>
+			<search position="after"><![CDATA[
+				'views' => $row['numViews']]]></search>
+			<add><![CDATA[
+				'views_link' => allowedTo('tvl_view_any') || (allowedTo('tvl_view_own') && $row['firstID_MEMBER'] == $ID_MEMBER) ? '<a href="' . $scripturl . '?action=topicviewlog;id=' . $row['ID_TOPIC'] . '">' . $row['numViews'] . '</a>' : $row['numViews'],]]></add>
+		</operation>
+	</file>
+
+	<file name="$sourcedir/ManagePermissions.php">
+		<operation>
+			<search position="before"><![CDATA[
+				'announce_topic' => false,]]></search>
+			<add><![CDATA[
+				'tvl_view' => true,]]></add>
+		</operation>
+	</file>
+
+	<file name="$sourcedir/Who.php">
+		<operation>
+			<search position="before"><![CDATA[
+	$board_ids = array();]]></search>
+			<add><![CDATA[
+	$log_ids = array();]]></add>
+		</operation>
+
+		<operation>
+			<search position="after"><![CDATA[
+			// Unlisted or unknown action.]]></search>
+			<add><![CDATA[
+			// He must be viewing a topic log.
+			elseif (isset($actions['action']) && $actions['action'] == 'topicviewlog' && allowedTo('tvl_view_any'))
+			{
+				// Assume they can't view it.
+				$data[$k] = $txt['who_hidden'];
+				$log_ids[(int) $actions['id']][$k] = $txt['who_topiclog'];
+			}]]></add>
+		</operation>
+
+		<operation>
+			<search position="after"><![CDATA[
+	// Load member names for the profile.]]></search>
+			<add><![CDATA[
+	// Load log names.
+	if (!empty($log_ids))
+	{
+		$result = db_query("
+			SELECT t.ID_TOPIC, m.subject
+			FROM ({$db_prefix}boards AS b, {$db_prefix}topics AS t, {$db_prefix}messages AS m)
+			WHERE {$user_info['query_see_board']}
+				AND t.ID_TOPIC IN (" . implode(', ', array_keys($log_ids)) . ")
+				AND t.ID_BOARD = b.ID_BOARD
+				AND m.ID_MSG = t.ID_FIRST_MSG
+			LIMIT " . count($log_ids), __FILE__, __LINE__);
+		while ($row = mysql_fetch_assoc($result))
+		{
+			// Show the log topic's subject for each of the actions.
+			foreach ($log_ids[$row['ID_TOPIC']] as $k => $session_text)
+				$data[$k] = sprintf($session_text, $row['ID_TOPIC'], censorText($row['subject']));
+		}
+		mysql_free_result($result);
+	}
+]]></add>
+		</operation>
+	</file>
+
+</modification>
