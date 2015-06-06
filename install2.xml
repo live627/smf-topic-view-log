@@ -37,6 +37,7 @@
 			<add><![CDATA[
 	// Include a fancy file for some logging.
 	require_once($sourcedir . '/TopicViewLog.php');
+	loadLanguage('TopicViewLog');
 
 	// Who viewed this?!
 	tvl_log();
@@ -87,6 +88,7 @@
 			// He must be viewing a topic log.
 			elseif (isset($actions['action']) && $actions['action'] == 'topicviewlog' && allowedTo('tvl_view_any'))
 			{
+				loadLanguage('TopicViewLog');
 				$data[$k] = $txt['who_hidden'];
 				$log_ids[(int) $actions['topic']][$k] = $txt['who_topiclog'];
 			}]]></add>
