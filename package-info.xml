@@ -6,23 +6,6 @@
 	<version>1.2</version>
 	<type>modification</type>
 
-	<install for="1.1.0 - 1.99.99">
-		<readme type="file" parsebbc="true">readme.txt</readme>
-		<modification format="xml" type="file">install1.xml</modification>
-		<modification format="xml" type="file">languages.xml</modification>
-		<require-file name="TopicLog.php" destination="$sourcedir" />
-		<require-file name="TopicLog.template.php" destination="$themedir" />
-		<code type="file">install1.php</code>
-	</install>
-
-	<uninstall for="1.1.0 - 1.99.99">
-		<modification format="xml" type="file" reverse="true">install1.xml</modification>
-		<modification format="xml" type="file" reverse="true">languages.xml</modification>
-		<remove-file name="$sourcedir/TopicLog.php" />
-		<remove-file name="$themedir/TopicLog.template.php" />
-	</uninstall>
-
-
 	<install for="2.0 - 2.99.99">
 		<readme type="file" parsebbc="true">readme.txt</readme>
 		<modification format="xml" type="file">install2.xml</modification>
