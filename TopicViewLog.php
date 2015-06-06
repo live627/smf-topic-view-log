@@ -184,29 +184,12 @@ function tvl_log()
 	if (empty($topic) || $user_info['is_guest'])
 		return false;
 
-	$smcFunc['db_query']('', '
-		UPDATE {db_prefix}log_topic_view
-		SET views = views + {int:views}, time = {int:time}
-		WHERE id_member = {int:member}
-			AND id_topic = {int:topic}
-		LIMIT 1',
-		array(
-			'member' => $user_info['id'],
-			'topic' => $topic,
-			'views' => !empty($_SESSION['last_read_topic']) && $_SESSION['last_read_topic'] == $topic ? 0 : 1,
-			'time' => time(),
-		)
+	$smcFunc['db_insert']('',
+		'{db_prefix}log_topic_view',
+		array('id_member' => 'int', 'id_topic' => 'int', 'time' => 'int'),
+		array($user_info['id'], $topic, time()),
+		array('id_member', 'id_topic')
 	);
-
-	if ($smcFunc['db_affected_rows']() == 0)
-	{
-		$smcFunc['db_insert']('ignore',
-			'{db_prefix}log_topic_view',
-			array('id_member' => 'int', 'id_topic' => 'int', 'views' => 'int', 'time' => 'int'),
-			array($user_info['id'], $topic, 1, time()),
-			array('id_member', 'id_topic')
-		);
-	}
 }
 
 ?>
