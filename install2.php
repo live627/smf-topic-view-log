@@ -44,7 +44,9 @@ if (!array_key_exists('db_add_column', $smcFunc))
 					'columns' => array('id_member', 'id_topic', 'time')
 				),
 				array(
-					'type' => 'key',
+					'columns' => array('id_member')
+				),
+				array(
 					'columns' => array('id_topic')
 				),
 			)
