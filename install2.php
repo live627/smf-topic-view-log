@@ -27,14 +27,6 @@ if (!array_key_exists('db_add_column', $smcFunc))
 					'name' => 'id_topic',
 					'type' => 'mediumint',					
 					'size' => '8',
-					'default' => '0',								
-				),
-					
-				array(
-					'name' => 'views',
-					'type' => 'int',					
-					'size' => '10',
-					'default' => '0',							
 				),
 
 				array(

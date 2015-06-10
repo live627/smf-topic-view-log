@@ -89,19 +89,6 @@ function TopicViewLog()
 					'reverse' => 'topic_posts DESC',
 				),
 			),
-			'views' => array(
-				'header' => array(
-					'value' => $txt['views'],
-				),
-				'data' => array(
-					'db' => 'views',
-					'style' => 'width: 10%; text-align: center;',
-				),
-				'sort' =>  array(
-					'default' => 'views',
-					'reverse' => 'views DESC',
-				),
-			),
 			'time' => array(
 				'header' => array(
 					'value' => $txt['tvl_times'],
@@ -133,7 +120,7 @@ function list_get_tvl_members($start, $items_per_page, $sort)
 	$request = $smcFunc['db_query']('', '
 		SELECT
 			mem.id_member, mem.member_name, mem.real_name, mg.group_name,
-			tvl.views, tvl.time, COUNT(m.id_msg) AS topic_posts
+			tvl.time, COUNT(m.id_msg) AS topic_posts
 		FROM {db_prefix}log_topic_view AS tvl
 			LEFT JOIN {db_prefix}members AS mem ON (mem.id_member = tvl.id_member)
 			LEFT JOIN {db_prefix}membergroups AS mg ON (mg.id_group = CASE WHEN mem.id_group = {int:regular_id_group} THEN mem.id_post_group ELSE mem.id_group END)
