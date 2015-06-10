@@ -41,7 +41,7 @@ if (!array_key_exists('db_add_column', $smcFunc))
 			'indexes' => array(
 				array(
 					'type' => 'primary',
-					'columns' => array('id_member', 'id_topic')
+					'columns' => array('id_member', 'id_topic', 'time')
 				),
 				array(
 					'type' => 'key',
