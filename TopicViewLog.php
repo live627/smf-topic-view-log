@@ -12,6 +12,8 @@ function TopicViewLog()
 	if (empty($topic))
 		fatal_lang_error('no_board', false);
 
+	loadLanguage('TopicViewLog');
+
 	$request = $smcFunc['db_query']('', '
 		SELECT id_member_started
 		FROM {db_prefix}topics
