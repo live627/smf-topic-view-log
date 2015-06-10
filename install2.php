@@ -132,16 +132,7 @@ if (!array_key_exists('db_add_column', $smcFunc))
 		//End check indexes
 	}
 
-	// OK, time to report, output all the stuff to be shown to the user
-	if ($manual_install){
-echo '
-<table cellpadding="0" cellspacing="0" border="0" class="tborder" width="800" align="center"><tr><td>
-<div class="titlebg" style="padding: 1ex" align="center">
-	BD CREATED! WWW.SMFSIMPLE.COM!
-</div>
-</td></tr></table>
-<br />
-</body></html>';
-    }
+if (!empty($ssi))
+	echo 'Database installation complete!';
 
 ?>
