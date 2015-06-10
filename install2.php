@@ -12,30 +12,28 @@ if (!array_key_exists('db_add_column', $smcFunc))
 
     // Creating tables
 	$tables = array(
-		
 		'log_topic_view' => array(
 			'name' => 'log_topic_view',
 			//Columns
 			'columns' => array(
 				array(
 					'name' => 'id_member',
-					'type' => 'mediumint',					
+					'type' => 'mediumint',
 					'size' => '8',
 					'default' => '0',
-				),							   								
+				),
 				array(
 					'name' => 'id_topic',
-					'type' => 'mediumint',					
+					'type' => 'mediumint',
 					'size' => '8',
+					'default' => '0',
 				),
-
 				array(
 					'name' => 'time',
-					'type' => 'int',					
+					'type' => 'int',
 					'size' => '10',
 					'default' => '0',
-					
-				),		
+				),
 			),
 			//End Columns
 			'indexes' => array(
@@ -50,9 +48,9 @@ if (!array_key_exists('db_add_column', $smcFunc))
 					'columns' => array('id_topic')
 				),
 			)
-		),		
+		),
 		//End Table
-	);	
+	);
 
 	foreach ($tables as $table)
 	{
