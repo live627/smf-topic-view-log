@@ -126,7 +126,6 @@ function list_get_tvl_members($start, $items_per_page, $sort)
 			LEFT JOIN {db_prefix}membergroups AS mg ON (mg.id_group = CASE WHEN mem.id_group = {int:regular_id_group} THEN mem.id_post_group ELSE mem.id_group END)
 			LEFT JOIN {db_prefix}messages AS m ON (m.id_member = mem.id_member AND m.id_topic = tvl.id_topic)
 		WHERE tvl.id_topic = {int:topic}
-		GROUP BY mem.id_member
 		ORDER BY {raw:sort}
 		LIMIT {int:start}, {int:per_page}',
 		array(
