@@ -1,6 +1,6 @@
 <?php
 // Version: 1.0: TopicViewLog.php
-// Licence: MIT
+// Licence: CC-BY-NC-SA
 
 if (!defined('SMF'))
 	die('Hacking attempt...');
