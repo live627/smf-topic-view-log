@@ -1,6 +1,6 @@
 <?php
 // Version: 1.0: TopicViewLog.english.php
-// Licence: MIT
+// Licence: CC-BY-NC-SA
 
 // Important! Before editing these language files please read the text at the top of index.english.php.
 
