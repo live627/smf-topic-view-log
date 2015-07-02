@@ -7,4 +7,4 @@ Changes:
 - 1.1.x support removed
 - Hits are no longer grouped by member
 
-[![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+[![CC-BY-NC-SA license](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/3.0/)
